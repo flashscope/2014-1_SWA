@@ -18,7 +18,11 @@ public class SortMain {
 
 		try {
 			AlgorithmsXMLParser parser = serializer.read( AlgorithmsXMLParser.class, source );
+			
 			sortAlgorithms = (SortAlgorithms)Class.forName( parser.getClassName() ).newInstance();
+			
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println( "PARSE ERROR:" + e.getMessage() );
